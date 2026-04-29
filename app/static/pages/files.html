@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Files</title>
+    <link rel="icon" href="/assets/logo.png" />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="brand brand--files">
+        <a class="btn" href="/">← Upload</a>
+        <img class="brand__logo brand__logo--small" src="/assets/logo.png" alt="Stratocore" />
+        <div></div>
+      </header>
+
+      <section class="card">
+        <div class="filesHeader">
+          <h1 class="card__title" style="margin: 0">Files</h1>
+          <div class="filesHeader__actions">
+            <button id="deleteSelectedBtn" class="btn btn--danger" type="button" disabled>
+              Delete selected
+            </button>
+          </div>
+        </div>
+
+        <div class="status" id="status" role="status" aria-live="polite"></div>
+
+        <div class="tableWrap">
+          <table class="table" aria-label="Files">
+            <thead>
+              <tr>
+                <th class="colCheck">
+                  <input id="checkAll" type="checkbox" aria-label="Select all" />
+                </th>
+                <th>Name</th>
+                <th class="colActions">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script src="/js/files.js"></script>
+  </body>
+</html>

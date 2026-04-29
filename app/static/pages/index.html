@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Stratocore</title>
+    <link rel="icon" href="/assets/logo.png" />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="brand">
+        <img class="brand__logo" src="/assets/logo.png" alt="Stratocore" />
+      </header>
+
+      <section class="card">
+        <h1 class="card__title">Upload files</h1>
+        <p class="card__subtitle">Drag & drop files here, or click to choose.</p>
+
+        <input id="fileInput" class="srOnly" type="file" multiple />
+
+        <button id="dropzone" class="dropzone" type="button" aria-describedby="dzHelp">
+          <div class="dropzone__inner">
+            <div class="dropzone__icon" aria-hidden="true">⬆</div>
+            <div class="dropzone__text">
+              <div class="dropzone__headline">Drag & drop</div>
+              <div id="dzHelp" class="dropzone__hint">or click & choose</div>
+            </div>
+          </div>
+        </button>
+
+        <div class="actions">
+          <button id="uploadBtn" class="btn btn--primary" type="button" disabled>Upload</button>
+          <button id="clearBtn" class="btn" type="button" disabled>Clear</button>
+          <a class="btn btn--primary btn--right" href="/files">Files</a>
+        </div>
+
+        <div class="status" id="status" role="status" aria-live="polite"></div>
+
+        <div>
+          <h2 class="sectionTitle">Selection</h2>
+          <ul id="selectedList" class="list"></ul>
+        </div>
+      </section>
+    </main>
+
+    <script src="/js/app.js"></script>
+  </body>
+</html>
